@@ -51,11 +51,14 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.ViewHo
         notifyItemInserted(position);
     }
 
+
     public void remove(int position) {
         mTodoList.remove(position);
         notifyItemRemoved(position);
         notifyItemChanged(position, mTodoList.size());
     }
+
+
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 

@@ -7,4 +7,20 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/red"
+        android:orderInCategory="100"
+        android:title="Red"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/green"
+        android:orderInCategory="100"
+        android:title="Green"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/blue"
+        android:orderInCategory="100"
+        android:title="Blue"
+        app:showAsAction="never" />
+
 </menu>

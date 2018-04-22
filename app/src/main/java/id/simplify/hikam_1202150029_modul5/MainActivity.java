@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onSwipedRight(RecyclerView.ViewHolder viewHolder) {
-                Toast.makeText(MainActivity.this, "Another or same action", Toast.LENGTH_SHORT).show();
+                adapter.remove(viewHolder.getAdapterPosition());
             }
         };
     }

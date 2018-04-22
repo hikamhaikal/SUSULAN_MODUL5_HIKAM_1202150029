@@ -92,18 +92,15 @@ public class DataHelper extends SQLiteOpenHelper {
         TodoList receivedTodoList = new TodoList();
         if (cursor.getCount() > 0) {
             cursor.moveToFirst();
-
             receivedTodoList.setTodo(cursor.getString(cursor.getColumnIndex(COLUMN_TODO)));
             receivedTodoList.setDescription(cursor.getString(cursor.getColumnIndex(COLUMN_DESCRIPTION)));
             receivedTodoList.setPriority(cursor.getString(cursor.getColumnIndex(COLUMN_PRIORITY)));
-
         }
         return receivedTodoList;
     }
 
     public void deletePersonRecord(long id, Context context) {
         SQLiteDatabase db = this.getWritableDatabase();
-
         db.execSQL("DELETE FROM " + TABLE_NAME + " WHERE _id='" + id + "'");
         Toast.makeText(context, "Deleted successfully.", Toast.LENGTH_SHORT).show();
 
